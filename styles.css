@@ -587,28 +587,30 @@ img {
 .plans {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 32px;
+  gap: 34px 32px;
   text-align: left;
 }
 
 .plans article {
-  padding: 0 8px 0 0;
-  border-right: 1px solid #edf0f4;
-}
-
-.plans article:last-child {
-  border-right: 0;
+  padding: 26px;
+  border: 1px solid #edf0f4;
+  border-radius: 14px;
+  background: var(--white);
+  box-shadow: 0 18px 46px rgba(15, 23, 42, 0.04);
 }
 
 .plans h3 {
-  margin: 0 0 24px;
+  min-height: 48px;
+  margin: 0 0 20px;
   color: #344052;
+  font-size: 18px;
+  line-height: 1.35;
 }
 
 .plans strong {
   display: block;
   color: #202636;
-  font-size: 46px;
+  font-size: clamp(34px, 4vw, 46px);
   line-height: 1;
 }
 
@@ -618,9 +620,10 @@ img {
 }
 
 .plans p {
-  min-height: 24px;
+  min-height: 44px;
   color: #8a93a3;
   font-size: 13px;
+  line-height: 1.7;
 }
 
 .plans a {
