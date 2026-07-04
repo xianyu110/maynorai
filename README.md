@@ -1,3 +1,17 @@
+# MaynorAI GitHub Pages
+
+这是一个纯静态 GitHub Pages 站点，首页在 `index.html`，样式在 `styles.css`，移动端导航逻辑在 `script.js`，页面图片已经保存到 `assets/`。
+
+本地预览：
+
+```bash
+python3 -m http.server 8765
+```
+
+打开 `http://127.0.0.1:8765/` 即可查看。推送到 `main` 分支后，`.github/workflows/pages.yml` 会自动发布 GitHub Pages。
+
+---
+
 # 探索 MaynorAI：AI 模型代理服务的领先平台
 
 在当今快速发展的 AI 时代，访问和集成各种大型语言模型（如 ChatGPT、Claude、Grok 和 Gemini）已成为开发者、企业和个人用户的关键需求。然而，由于地域限制、技术壁垒或稳定性问题，许多用户尤其是中国用户，常常面临接入难题。这时，MaynorAI 作为一家专业的 AI 模型代理和 API 服务平台，脱颖而出。它不仅提供稳定的访问渠道，还帮助用户轻松地将这些强大模型融入产品或服务中。今天，我们就来深入了解 MaynorAI 的魅力所在。
