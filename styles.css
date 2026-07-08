@@ -668,6 +668,209 @@ img {
   font-weight: 700;
 }
 
+.desktop-nav a[aria-current="page"],
+.mobile-nav a[aria-current="page"] {
+  color: var(--brand);
+}
+
+.keyword-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 56px;
+  align-items: center;
+  padding: 88px 0 72px;
+}
+
+.keyword-hero h1,
+.keyword-table-section h2,
+.build-roadmap h2 {
+  margin: 0;
+  color: #202636;
+  font-size: clamp(34px, 5vw, 56px);
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+
+.keyword-hero .hero-copy {
+  margin-left: 0;
+  margin-right: 0;
+  text-align: left;
+}
+
+.keyword-summary {
+  display: grid;
+  gap: 18px;
+  padding: 28px;
+  border: 1px solid #edf0f4;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
+  box-shadow: var(--shadow);
+}
+
+.keyword-summary div {
+  display: grid;
+  grid-template-columns: 88px 1fr;
+  align-items: center;
+  min-height: 78px;
+  padding: 16px 18px;
+  border: 1px solid #edf0f4;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.keyword-summary strong {
+  color: var(--brand);
+  font-size: 42px;
+  line-height: 1;
+}
+
+.keyword-summary span {
+  color: #445065;
+  font-weight: 800;
+}
+
+.intent-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  padding: 18px 0 78px;
+}
+
+.intent-strip article,
+.roadmap-list article {
+  padding: 26px;
+  border: 1px solid #edf0f4;
+  border-radius: 14px;
+  background: var(--white);
+  box-shadow: 0 18px 46px rgba(15, 23, 42, 0.04);
+}
+
+.intent-strip span,
+.roadmap-list span,
+.section-kicker {
+  color: var(--brand);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.intent-strip h2,
+.roadmap-list h3 {
+  margin: 12px 0 12px;
+  color: #2d3748;
+  font-size: 22px;
+}
+
+.intent-strip p,
+.roadmap-copy p,
+.roadmap-list p {
+  margin: 0;
+  color: #687282;
+  line-height: 1.8;
+}
+
+.keyword-table-section {
+  padding: 82px 0 96px;
+  border-top: 1px solid #f0f2f5;
+}
+
+.keyword-table-section h2 {
+  margin-top: 10px;
+  margin-bottom: 28px;
+}
+
+.keyword-table-wrap {
+  overflow-x: auto;
+  border: 1px solid #edf0f4;
+  border-radius: 16px;
+  background: var(--white);
+  box-shadow: 0 18px 46px rgba(15, 23, 42, 0.04);
+}
+
+.keyword-table {
+  width: 100%;
+  min-width: 980px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.keyword-table th,
+.keyword-table td {
+  padding: 18px 16px;
+  border-bottom: 1px solid #edf0f4;
+  vertical-align: top;
+}
+
+.keyword-table th {
+  color: #445065;
+  background: #f8fafc;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.keyword-table td {
+  color: #536071;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.keyword-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.keyword-table td:first-child {
+  color: #202636;
+  font-weight: 800;
+}
+
+.keyword-table strong {
+  color: #202636;
+}
+
+.decision {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.decision-build {
+  color: #0f766e;
+  background: #ccfbf1;
+}
+
+.decision-test {
+  color: #5b21b6;
+  background: #ede9fe;
+}
+
+.decision-watch {
+  color: #92400e;
+  background: #fef3c7;
+}
+
+.build-roadmap {
+  display: grid;
+  grid-template-columns: 0.82fr 1fr;
+  gap: 48px;
+  padding: 92px 0 120px;
+  border-top: 1px solid #f0f2f5;
+}
+
+.roadmap-copy p {
+  margin-top: 24px;
+  font-size: 17px;
+}
+
+.roadmap-list {
+  display: grid;
+  gap: 18px;
+}
+
 .site-footer {
   padding: 38px 24px;
   border-top: 1px solid var(--line);
@@ -699,6 +902,8 @@ img {
 
   .claude-panel,
   .api-section,
+  .keyword-hero,
+  .build-roadmap,
   .plans {
     grid-template-columns: 1fr;
   }
@@ -707,7 +912,8 @@ img {
     display: none;
   }
 
-  .feature-grid {
+  .feature-grid,
+  .intent-strip {
     grid-template-columns: 1fr;
     padding-bottom: 70px;
   }
@@ -772,5 +978,18 @@ img {
 
   .tabs span {
     min-width: auto;
+  }
+
+  .keyword-hero {
+    padding-top: 70px;
+  }
+
+  .keyword-summary {
+    padding: 18px;
+  }
+
+  .keyword-table-section,
+  .build-roadmap {
+    padding: 64px 0;
   }
 }
